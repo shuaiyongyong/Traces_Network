@@ -32,7 +32,7 @@
 	<mvc:annotation-driven />
 	
 	<!-- 配制websocket -->
-	<websocket:handlers>
+<!-- 	<websocket:handlers>
         <websocket:mapping path="/pushmsg" handler="pushMsgHandler"/>
-    </websocket:handlers>
+    </websocket:handlers> -->
 </beans>
