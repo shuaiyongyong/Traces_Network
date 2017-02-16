@@ -19,7 +19,7 @@
             <li id="l2"><a href="#">达人攻略</a></li>
             <li id="l2"><a href="#">你问我答</a></li>
             <li id="l2"><a href="#">关于我们</a></li>
-            <li id="l3"><a href="customize.jsp" target="_blank">立即定制</a></li>
+            <li id="l3"><a href="page/customize.jsp" target="_blank">立即定制</a></li>
             <li id="l4"><a href="#">登录</a></li>
             <li id="l5"></li>
             <li id="l4"><a href="#" id="reg">注册</a></li>
