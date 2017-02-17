@@ -39,14 +39,13 @@ article{
 	margin-left:100px;
 	margin-top:10px;
 }
-#custform{
+.custform{
 	width:100%;
 	height:100%;
 	border-radius:10px;
 	background:rgba(180, 180, 250, 0.6) none repeat scroll 0 0 !important;
 }
-
-#selects{
+.selects{
 	width:120px;
 	height:40px;
 	font-size:15px;
@@ -62,8 +61,31 @@ article{
 	margin-top:30px;
 	margin-left:5px;
 }
-#next{
-	width:350px;
+#fromtop{
+	width: 450px;
+	height: 100px;
+	margin-left: 50px;
+	border-bottom: 2px blue solid;
+}
+#l6{
+	width: 80px;
+	height: 50px;
+	list-style-type: none;
+	float: left;
+	margin-top: 50px;
+	text-align: center;
+	border:2px blue solid;
+	border-bottom: none;
+	border-radius:10px 10px 0px 0px ;
+}
+#l6 a{
+	font-family:'微软雅黑';
+	font-size:21px;
+	line-height: 50px;
+	text-decoration:none;
+}
+#next_1{
+ 	width:350px;
 	height:50px;
 	text-align:center;
 	border-radius:50px;
@@ -75,7 +97,7 @@ article{
 	font-family:'微软雅黑';
 	color:#000;
 	line-height:45px;
-}
+ }
 #right{
 	width:53%;
 	height:100%;

@@ -35,17 +35,19 @@
                 <p id="p5">- 剩下的一切，交给浪迹网就好 -</p>
             </div>
             <div id="left_bottom">
-            	<form id="custform">
-                	<span style="margin-left:40px;">出行日期:</span>&nbsp;<select id="selects">
+            	<form class="custform"  id="custform1">
+                	<span style="margin-left:40px;">出行日期:</span>&nbsp;<select  class="selects" id="year"  onclick="checkYear()">
                     			
                     		</select>
-                            <select id="selects">
-                    			
+                            <select class="selects" id="month" onclick="checkMon()">
+                    			<option value="月份">月份</option>
+                    			<option value="不确定">不确定</option>
                     		</select>
-                            <select id="selects">
-                    			
+                            <select class="selects" id="day" >
+                    			<option value="日期">日期</option>
+                    			<option value="不确定">不确定</option>
                     		</select><br/>
-                    <span style="margin-left:40px;">旅行天数:</span>&nbsp;<select id="selects">
+                    <span style="margin-left:40px;">旅行天数:</span>&nbsp;<select class="selects">
                     			<option value="请选择">请选择</option>
                                 <option value="1天">1天</option>
                                 <option value="2天">2天</option>
@@ -57,7 +59,7 @@
                                 <option value="8天">8天</option>
                                 <option value="9天及以上">9天及以上</option>
                     		</select><br/>
-                     <span style="margin-left:40px;">出行人数:</span>&nbsp;<select id="selects">
+                     <span style="margin-left:40px;">出行人数:</span>&nbsp;<select class="selects">
                     			<option value="请选择">请选择</option>
                                 <option value="1人">1人</option>
                                 <option value="2人">2人</option>
@@ -69,7 +71,7 @@
                                 <option value="8人">8人</option>
                                 <option value="9人及以上">9人及以上</option>
                     		</select><br/> 
-                     <span style="margin-left:40px;">其中儿童:</span>&nbsp;<select id="selects">
+                     <span style="margin-left:40px;">其中儿童:</span>&nbsp;<select class="selects">
                     			<option value="无">无</option>
                                 <option value="1人">1人</option>
                                 <option value="2人">2人</option>
@@ -81,7 +83,7 @@
                                 <option value="8人">8人</option>
                                 <option value="9人及以上">9人及以上</option>
                     		</select><br/>
-                     <span style="margin-left:40px;">其中老人:</span>&nbsp;<select id="selects">
+                     <span style="margin-left:40px;">其中老人:</span>&nbsp;<select class="selects">
                     			<option value="无">无</option>
                                 <option value="1人">1人</option>
                                 <option value="2人">2人</option>
@@ -93,8 +95,14 @@
                                 <option value="8人">8人</option>
                                 <option value="9人及以上">9人及以上</option>
                     		</select><br/>
-                     <span style="margin-left:40px;">其他要求:</span>&nbsp;<textarea rows="5" cols="50" id="contents"></textarea>
-                     <input type="button" value="下一步" id="next" />
+                     <span style="margin-left:40px;">其他要求:</span>&nbsp;<textarea rows="5" cols="50" id="contents"></textarea><br/>
+                     <input type="button" value="下一步" id="next_1" onclick="next1()" />
+                </form>
+                <form class="custform"   id="custform2">
+                	<div id="fromtop">
+                			<li id="l6"><a href="javascript:void(0)">湖南</a></li>
+                	</div>
+                	<input type="button" value="下一步" id="next_1" onclick="next2()" />
                 </form>
             </div>
         </div>
@@ -111,6 +119,7 @@
             <p id="p3">技术支持：<a href="page/login.jsp">gCoder工作室</a> </p>
         </div>
     </footer>
-
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/customize.js"></script>
 </body>
 </html>
