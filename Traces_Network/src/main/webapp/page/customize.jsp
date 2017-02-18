@@ -28,13 +28,11 @@
     </header>
     
     <article>
-    
-    	<div id="left">
-        	<div id="left_top">
+        	<div id="article_top">
             	<p id="p4">你只需要决定出发</p>
                 <p id="p5">- 剩下的一切，交给浪迹网就好 -</p>
             </div>
-            <div id="left_bottom">
+            <div id="article__bottom">
             	<form class="custform"  id="custform1">
                 	<span style="margin-left:40px;">出行日期:</span>&nbsp;<select  class="selects" id="year"  onclick="checkYear()">
                     			
@@ -123,7 +121,7 @@
                 	<input type="button" value="下一步" id="next_1" onclick="next2()" /><a href="javascript:void(0)"  id="a2" onclick="return1()">返回重新选择</a>
                 </form>
                  <form class="custform"   id="custform3">
-                 	<p id="p7">旅游喜好</p>
+                 	<p id="p7">旅游喜好</p><br/><br/>
                  	<div id="tracelike">
                  		<a href="javascript:void(0)"  ><img class="al3"  src="images/fengguang.png"></a>
                  		<a href="javascript:void(0)"  ><img class="al3" src="images/gouwu.png"></a>
@@ -135,10 +133,6 @@
                 	<input type="button" value="提交预约" id="next_1" onclick="commitNeed()" /><a href="javascript:void(0)"  id="a2" onclick="return2()">返回重新选择</a>
                 </form>
             </div>
-        </div>
-    	<div id="right">
-        	
-        </div>
     </article>
     
     <footer>

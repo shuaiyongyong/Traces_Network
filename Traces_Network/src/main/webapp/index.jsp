@@ -31,7 +31,7 @@
 			<div id="made">
             	<p>浪迹网，定制您的完美旅行</p>
                 <li id="l6"><a href="index.html#classic">经典路线</a></li>
-                <li id="l7"><a href="index.html#customize">立即定制</a></li>
+                <li id="l7"><a href="page/customize.jsp" target="_blank">立即定制</a></li>
             </div>
     	</div>
     	<div name="classic" id="classic">

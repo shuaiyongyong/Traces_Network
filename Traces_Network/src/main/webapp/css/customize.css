@@ -6,16 +6,13 @@ article{
 	height:768px;
 	background:url(../images/pexels-photo-262513.jpeg);
 }
-#left{
-	width:47%;
-	height:100%;
-	float:left;
-}
-#left_top{
+
+#article_top{
 	width:550px;
 	height:100px;
-	margin-left:100px;
-	margin-top:45px;
+	margin-left:410px;
+	position: absolute;
+	margin-top: 30px;
 }
 #p4{
 	width:550px;
@@ -33,17 +30,19 @@ article{
 	margin-top:10px;
 }
 
-#left_bottom{
+#article__bottom{
 	width:550px;
 	height:600px;
 	margin-left:100px;
-	margin-top:10px;
+	margin-top:130px;
+	position: absolute;
 }
 .custform{
 	width:100%;
 	height:100%;
 	border-radius:10px;
 	background:rgba(180, 180, 250, 0.6) none repeat scroll 0 0 !important;
+	margin-left: 300px;
 }
 .selects{
 	width:120px;
@@ -122,7 +121,7 @@ article{
 #p6{
 	width: 300px;
 	height: 30px;
-	margin-left: 50px;
+	margin-left: 150px;
 	font-family:'微软雅黑';
 	font-size:16px;
 	line-height: 30px;
@@ -145,7 +144,7 @@ article{
 	border:2px #0FF solid;
 	border-radius:50px;
 	background:#0FF;
-	margin-left:50px;
+	margin-left:150px;
 	margin-top:30px;
 	font-size:24px;
 	font-weight:bold;
@@ -156,25 +155,21 @@ article{
  #p7{
  	width: 300px;
 	height: 50px;
-	margin-left: 50px;
+	margin-left: 65px;
 	font-family:'微软雅黑';
 	font-size:21px;
 	line-height: 50px;
+	margin-top:20px;
+	position: absolute;
  }
  #tracelike{
  	width: 550px;
 	height: 420px;
-	margin-top: 10px;
  }
 .al3{
 	width: 175px;
 	height: 85px;
 	float: left;
 	margin-left:65px;
-	margin-top:40px;
-}
-#right{
-	width:53%;
-	height:100%;
-	float:left;
+	margin-top:45px;
 }
