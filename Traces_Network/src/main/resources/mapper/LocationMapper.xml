@@ -12,5 +12,4 @@
 	<select id="getAllLocation" parameterType="LocationEntity" resultType="com.yc.tn.entity.LocationEntity">
 		select * from location where userid=#{userid}
 	</select>
-	
 </mapper>

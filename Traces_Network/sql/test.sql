@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -45,7 +46,7 @@ create table users(
        User_TrueName varchar(20),--姓名(感觉可以省略)
        User_Sex varchar(2),--性别
        User_BirthDay date,--出生日期
-       User_Pic blob,--头像
+       User_Pic varchar(50),--头像
        User_Email varchar(20),--邮箱
        User_Adress varchar(200),--地址
        User_Phone varchar(20),--电话
@@ -127,7 +128,7 @@ create table strategyInfo(
 	strategy_Id int,--分类编号
 	strategyInfo_Title varchar(50),--标题
 	strategyInfo_Content varchar(1000),--攻略内容
-	strategyInfo_Picture blob,--图片
+	strategyInfo_Picture varchar(50),--图片
 	user_Id int,--发布者编号
 	status int ,--审核状态
 	strategyInfo_Click	int,--点击率
@@ -167,3 +168,33 @@ create table strategyAnswer(
 =======
 select * from location where userid=1
 >>>>>>> branch 'master' of git@github.com:shuaiyongyong/Traces_Network
+=======
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `location`
+-- ----------------------------
+DROP TABLE IF EXISTS `location`;
+CREATE TABLE `location` (
+  `l_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '位置表',
+  `l_longitude` double NOT NULL COMMENT '经度',
+  `l_latitude` double NOT NULL COMMENT '纬度',
+  `l_address` varchar(64) DEFAULT NULL COMMENT '位置',
+  `l_time` datetime DEFAULT NULL,
+  `userid` int(11) NOT NULL,
+  PRIMARY KEY (`l_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of location 
+-- ----------------------------
+INSERT INTO `location` VALUES ('1', '112.6915820000', '26.8878180000', '位置1', '2014-03-05 14:00:00', '1');
+INSERT INTO `location` VALUES ('2', '112.6235590000', '26.9168710000', '位置2', '2014-03-06 08:00:00', '1');
+INSERT INTO `location` VALUES ('3', '112.6135410000', '26.9127470000', '位置3', '2014-03-06 12:30:00', '1');
+INSERT INTO `location` VALUES ('4', '112.6169170000', '26.8947530000', '位置4', '2014-03-06 16:00:00', '1');
+INSERT INTO `location` VALUES ('5', '112.5895420000', '26.8581840000', '位置5', '2014-03-06 17:00:00', '1');
+INSERT INTO `location` VALUES ('6', '112.6004210000', '26.9024450000', '位置6', '2014-03-06 18:00:00', '1');
+
+
+select * from location where userid=1
+>>>>>>> e3a68c0b8eb64352c58f1f7c4181734cce96194c

@@ -1,3 +1,4 @@
+
 package com.yc.tn.service;
 
 import java.util.List;
@@ -11,3 +12,4 @@ public interface LocationService {
 
 	List<LocationEntity> getAllLocation(LocationEntity locationEntity);
 }
+

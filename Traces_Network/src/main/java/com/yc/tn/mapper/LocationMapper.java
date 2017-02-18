@@ -1,3 +1,4 @@
+
 package com.yc.tn.mapper;
 
 import java.util.List;
@@ -12,3 +13,4 @@ public interface LocationMapper {
 	List<LocationEntity> getAllLocation(LocationEntity locationEntity);
 
 }
+
