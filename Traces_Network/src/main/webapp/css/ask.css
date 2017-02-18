@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+article{
+	width:100%;
+	height:600px;
+	background:#EFEFEF;	
+}
+
+.article-top{
+	width:100%;
+	height:2%;
+	background:#EFEFEF;
+}
+
+.article-remain{
+	width:990px;
+	height:97%;
+	border:1px solid #CCC;
+	background:#FDFDFD;
+	margin-bottom:30px;
+}
+
+a{
+	text-decoration:none;
+}
+
+.remain-right{
+	width:70%;
+	height:100%;
+	float:left;
+	border-right:1px solid #CCC;
+}
+
+.right-top{
+	width:100%;
+	height:10%;
+	float:left;
+	background:#FDFDFD;
+}
+
+.right-bottom{
+	width:100%;
+	height:89%;
+	float:left;
+	border-top:1px solid #CCC;
+	background:#FFFFFF;
+}
+
+.remain-left{
+	width:29%;
+	height:100%;
+	float:left;
+}
+
+.right-top .tabs{
+	list-style-type:none;
+	display:inline-block;
+}
+
+.tabs .tabs-a{
+	width:117px;
+	height:40px;
+	float:left;
+	/* border-right:1px  solid #CCC; */
+	padding-top:18px;
+}
+
+.item{
+	margin-left:25px;	
+}
+
+.tabs .tabs-b{
+	width:117px;
+	height:40px;
+	float:left;
+	border-right:1px  solid #CCC;
+	padding-top:18px;
+		background-color:#ccc;
+}
+
+.info{
+	width:654px;
+	height:23px;
+	margin-top:20px;
+}
+
+.tip{
+	width:168px;
+	height:23px;
+	font-size:14px;
+	float:left;
+	color:#666;
+	margin-left:40px;
+	
+}
+
+.count{
+	width:86px;
+	height:20px;
+	font-size:14px;
+	color:#CCC;
+	margin-left:300px;
+}
+
+.question{
+	width:620px;
+	height:85px;
+	margin-left:40px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.tag-editor{
+	display:none;
+}
+
+.tag-add{
+	margin-left:300px;
+}
+
+.btn-primary{
+	width:86px;
+	height:30px;
+	margin-left:580px;
+	background:url(../images/submit.png);
+}
+
+.mod-question-term{
+	width:654px;
+	height:100px;
+	background:#FDFDFD;
+	font-size:14px;
+	color:#F00;
+	border:1px solid #CCC;
+	margin-top:60px;
+}
+
+.p1{
+	width:622px;
+	height:20px;
+	margin-top:5px;
+}
+
+.p2{
+	width:622px;
+	height:40px;
+	margin-top:10px;
+}
+
+.hd{
+	width:235px;
+	height:27px;
+	margin-top:10px;
+	margin-bottom:5px;
+	border-bottom:1px solid #CCC;
+}
+.title{
+	padding-left:5px;
+}
+
+.bd{
+	width:235px;
+	height:409px;
+	font-size:14px;
+}
+
+.media-list-b{
+	margin-top:10px;
+	border-bottom:1px dashed #ccc;
+}
+
+.info2{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
