@@ -100,9 +100,39 @@
                 </form>
                 <form class="custform"   id="custform2">
                 	<div id="fromtop">
-                			<li id="l6"><a href="javascript:void(0)">湖南</a></li>
+                			<a href="javascript:void(0)"  class="al1"><li id="l6">湖南</li></a>
+                			<li id="l7"></li>	
                 	</div>
-                	<input type="button" value="下一步" id="next_1" onclick="next2()" />
+                	<div id="fromattric">
+                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">长沙市</li></a>
+                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">株洲市</li></a>
+                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">湘潭市</li></a>
+                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">衡阳市</li></a>
+                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">邵阳市</li></a>
+                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">岳阳市</li></a>
+                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">张家界市</li></a>
+                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">益阳市</li></a>
+							<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">常德市</li></a>
+							<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">娄底市</li></a>
+							<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">郴州市</li></a>
+							<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">永州市</li></a>
+							<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">怀化市</li></a>
+							<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">湘西自治州</li></a>
+                	</div>
+                	<p id="p6">还不确定目的地，<a href="javascript:void(0)"  id="a1" onclick="next2()">点这里</a></p>
+                	<input type="button" value="下一步" id="next_1" onclick="next2()" /><a href="javascript:void(0)"  id="a2" onclick="return1()">返回重新选择</a>
+                </form>
+                 <form class="custform"   id="custform3">
+                 	<p id="p7">旅游喜好</p>
+                 	<div id="tracelike">
+                 		<a href="javascript:void(0)"  ><img class="al3"  src="images/fengguang.png"></a>
+                 		<a href="javascript:void(0)"  ><img class="al3" src="images/gouwu.png"></a>
+                 		<a href="javascript:void(0)"  ><img  class="al3" src="images/lishi.png"></a>
+                 		<a href="javascript:void(0)"  ><img class="al3" src="images/meishi.png"></a>
+                 		<a href="javascript:void(0)"  ><img class="al3" src="images/yiji.png"></a>
+                 		<a href="javascript:void(0)"  ><img class="al3" src="images/zongjiao.png"></a>
+                 	</div>
+                	<input type="button" value="提交预约" id="next_1" onclick="commitNeed()" /><a href="javascript:void(0)"  id="a2" onclick="return2()">返回重新选择</a>
                 </form>
             </div>
         </div>

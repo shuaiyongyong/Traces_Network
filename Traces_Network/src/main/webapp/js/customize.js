@@ -6,9 +6,11 @@ var monthLength=12-month;
 var years1=years+1;
 $(function(){
 //	$("#custform1").css("display","block");
-//	$("#custform2").css("display","none");
+	$("#custform2").css("display","none");
+//	$("#custform3").css("display","none");
 	$("#custform1").css("display","none");
-	$("#custform2").css("display","block");
+//	$("#custform2").css("display","block");
+	$("#custform3").css("display","block");
 	$("#year").append("<option value='"+years+"'>"+years+"年</option><option value='"+years1+"'>"+years1+"年</option>");
 	for(var i=0;i<=monthLength;i++){
 		var months=month+i;
@@ -72,4 +74,27 @@ function checkMon(){
 function next1(){
 	$("#custform1").css("display","none");
 	$("#custform2").css("display","block");
+	$("#custform3").css("display","none");
+}
+function next2(){
+	$("#custform1").css("display","none");
+	$("#custform2").css("display","none");
+	$("#custform3").css("display","block");
+}
+function commitNeed(){
+	 window.open('page/success.jsp','_self');
+}
+function return1(){
+	$("#custform1").css("display","block");
+	$("#custform2").css("display","none");
+	$("#custform3").css("display","none");
+}
+function return2(){
+	$("#custform1").css("display","none");
+	$("#custform2").css("display","block");
+	$("#custform3").css("display","none");
+}
+function check(){
+	$(".al2").css("color","black");
+	$(".al2").css("background-color","blue");
 }
