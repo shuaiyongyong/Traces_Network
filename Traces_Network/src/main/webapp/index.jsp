@@ -16,8 +16,8 @@
             <li id="l2"><a href="page/custom.jsp">定制旅行</a></li>
             <li id="l2"><a href="#">经典路线</a></li>
             <li id="l2"><a href="#">深度推荐</a></li>
-            <li id="l2"><a href="#">达人攻略</a></li>
-            <li id="l2"><a href="page/quList.jsp">你问我答</a></li>
+            <li id="l2"><a href="page/lutan.jsp">达人攻略</a></li>
+            <li id="l2"><a href="#">你问我答</a></li>
             <li id="l2"><a href="#">关于我们</a></li>
             <li id="l3"><a href="page/customize.jsp" target="_blank">立即定制</a></li>
             <li id="l4"><a href="#">登录</a></li>
@@ -31,7 +31,7 @@
 			<div id="made">
             	<p>浪迹网，定制您的完美旅行</p>
                 <li id="l6"><a href="index.html#classic">经典路线</a></li>
-                <li id="l7"><a href="index.html#customize">立即定制</a></li>
+                <li id="l7"><a href="page/customize.jsp" target="_blank">立即定制</a></li>
             </div>
     	</div>
     	<div name="classic" id="classic">

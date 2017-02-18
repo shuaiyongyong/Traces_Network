@@ -6,16 +6,13 @@ article{
 	height:768px;
 	background:url(../images/pexels-photo-262513.jpeg);
 }
-#left{
-	width:47%;
-	height:100%;
-	float:left;
-}
-#left_top{
+
+#article_top{
 	width:550px;
 	height:100px;
-	margin-left:100px;
-	margin-top:45px;
+	margin-left:410px;
+	position: absolute;
+	margin-top: 30px;
 }
 #p4{
 	width:550px;
@@ -33,20 +30,21 @@ article{
 	margin-top:10px;
 }
 
-#left_bottom{
+#article__bottom{
 	width:550px;
 	height:600px;
 	margin-left:100px;
-	margin-top:10px;
+	margin-top:130px;
+	position: absolute;
 }
-#custform{
+.custform{
 	width:100%;
 	height:100%;
 	border-radius:10px;
 	background:rgba(180, 180, 250, 0.6) none repeat scroll 0 0 !important;
+	margin-left: 300px;
 }
-
-#selects{
+.selects{
 	width:120px;
 	height:40px;
 	font-size:15px;
@@ -62,22 +60,116 @@ article{
 	margin-top:30px;
 	margin-left:5px;
 }
-#next{
-	width:350px;
+#fromtop{
+	width: 500px;
+	height: 100px;
+	margin-left: 50px;
+}
+.al1{
+	width: 80px;
+	height: 50px;
+	text-decoration:none;
+	float: left;
+	margin-top: 50px;
+	text-align: center;
+	border:2px blue solid;
+	border-bottom: none;
+	border-radius:10px 10px 0px 0px ;
+}
+#l6{
+	width: 80px;
+	height: 50px;
+	font-family:'微软雅黑';
+	font-size:21px;
+	line-height: 50px;
+	list-style-type: none;
+}
+#l7{
+	width: 380px;
+	height: 50px;
+	list-style-type: none;
+	float: left;
+	margin-top: 50px;
+	text-align: center;
+	border-bottom: 2px blue solid;
+}
+#fromattric{
+	width: 500px;
+	height: 320px;
+	margin-left: 50px;
+	margin-top: 10px;
+}
+.al2{
+	width: 100px;
+	height: 50px;
+	text-decoration:none;
+	float: left;
+	margin-top:20px;
+	margin-right:20px;
+	text-align: center;
+	border:1px dashed #0000ff;
+	border-radius:10px ;
+}
+#l8{
+	width: 100px;
+	height: 50px;
+	font-family:'微软雅黑';
+	font-size:18px;
+	line-height: 50px;
+	list-style-type: none;
+}
+#p6{
+	width: 300px;
+	height: 30px;
+	margin-left: 150px;
+	font-family:'微软雅黑';
+	font-size:16px;
+	line-height: 30px;
+}
+#a1{
+	text-decoration:none;
+	font-size:16px;
+	line-height: 30px;
+}
+#a2{
+	text-decoration:none;
+	font-size:16px;
+	line-height: 30px;
+	margin-left: 15px;
+}
+#next_1{
+ 	width:150px;
 	height:50px;
 	text-align:center;
+	border:2px #0FF solid;
 	border-radius:50px;
 	background:#0FF;
-	margin-left:100px;
+	margin-left:150px;
 	margin-top:30px;
 	font-size:24px;
 	font-weight:bold;
 	font-family:'微软雅黑';
 	color:#000;
 	line-height:45px;
-}
-#right{
-	width:53%;
-	height:100%;
-	float:left;
+ }
+ #p7{
+ 	width: 300px;
+	height: 50px;
+	margin-left: 65px;
+	font-family:'微软雅黑';
+	font-size:21px;
+	line-height: 50px;
+	margin-top:20px;
+	position: absolute;
+ }
+ #tracelike{
+ 	width: 550px;
+	height: 420px;
+ }
+.al3{
+	width: 175px;
+	height: 85px;
+	float: left;
+	margin-left:65px;
+	margin-top:45px;
 }

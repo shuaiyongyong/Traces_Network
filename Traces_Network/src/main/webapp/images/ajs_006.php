@@ -1,0 +1,3 @@
+var OX_55f64727 = '';
+OX_55f64727 += "<"+"a href=\'http://ads.8264.com/www/delivery/ck.php?oaparams=2__bannerid=25__zoneid=9__cb=7e1d365cac__oadest=https%3A%2F%2Fcamelsports.tmall.com%2F\' target=\'_blank\'>µ½<"+"/a><"+"div id=\'beacon_7e1d365cac\' style=\'position: absolute; left: 0px; top: 0px; visibility: hidden;\'><"+"img src=\'http://ads.8264.com/www/delivery/lg.php?bannerid=25&amp;campaignid=4&amp;zoneid=9&amp;loc=1&amp;referer=http%3A%2F%2Fbbs.8264.com%2Fthread-5373899-1-1.html&amp;cb=7e1d365cac\' width=\'0\' height=\'0\' alt=\'\' style=\'width: 0px; height: 0px;\' /><"+"/div>\n";
+document.write(OX_55f64727);
