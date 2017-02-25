@@ -4,13 +4,13 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 命名空间 与 对应的 映射接口 的 全类名 必须保持一致 -->
 <mapper namespace="com.yc.tn.mapper.LocationMapper">
-	
-	<select id="getLocationList" parameterType="int" resultType="com.yc.tn.entity.LocationEntity">
-		select * from location where userid=#{userid}
+
+	<select id="getAllLocation" parameterType="LocationEntity" resultType="com.yc.tn.entity.LocationEntity">
+		select * from (select * from scenic where city_Id=#{city_Id} and scenic_Level &gt;= #{scenic_Level} and scenic_Type like '%${scenic_Type}%' order by scenic_Id asc) where rownum <=6
 	</select>
 	
-	<select id="getAllLocation" parameterType="LocationEntity" resultType="com.yc.tn.entity.LocationEntity">
-		select * from location where userid=#{userid}
+	<select id="getScenicType" parameterType="int" resultType="String">
+		select tag_Name from tag where tag_Id=#{tag_Id}
 	</select>
 	
 </mapper>

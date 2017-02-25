@@ -20,7 +20,7 @@
             <li id="l2"><a href="#">你问我答</a></li>
             <li id="l2"><a href="#">关于我们</a></li>
             <li id="l3"><a href="page/customize.jsp" target="_blank">立即定制</a></li>
-            <li id="l4"><a href="#">登录</a></li>
+            <li id="l4"><a href="page/login.jsp">登录</a></li>
             <li id="l5"></li>
             <li id="l4"><a href="#" id="reg">注册</a></li>
         </div>
@@ -58,7 +58,7 @@
     </article>
     
     <footer>
-    	<a href="index.jsp"><img src="images/logo.jpg"/></a>
+    	<a href="index.jsp"><img src="images/logo.jpg" /></a>
         <div id="p">
             <p id="p1">(C)Copyright 2017 版权所有：衡阳浪迹旅行社有限公司 &nbsp;地址:湖南省衡阳市珠晖区衡花路18号 &nbsp;邮编:421002</p>
             <p id="p2">&nbsp;&nbsp;电话：13722237047 13303028262 &nbsp;&nbsp; E-mail：hyljw@163.com</p>

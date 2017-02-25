@@ -21,7 +21,7 @@
             <li id="l2"><a href="#">你问我答</a></li>
             <li id="l2"><a href="#">关于我们</a></li>
             <li id="l3"><a href="page/customize.jsp" target="_blank">立即定制</a></li>
-            <li id="l4"><a href="#">登录</a></li>
+            <li id="l4"><a href="page/login.jsp">登录</a></li>
             <li id="l5"></li>
             <li id="l4"><a href="#" id="reg">注册</a></li>
         </div>
@@ -33,104 +33,67 @@
                 <p id="p5">- 剩下的一切，交给浪迹网就好 -</p>
             </div>
             <div id="article__bottom">
-            	<form class="custform"  id="custform1">
-                	<span style="margin-left:40px;">出行日期:</span>&nbsp;<select  class="selects" id="year"  onclick="checkYear()">
-                    			
-                    		</select>
-                            <select class="selects" id="month" onclick="checkMon()">
-                    			<option value="月份">月份</option>
-                    			<option value="不确定">不确定</option>
-                    		</select>
-                            <select class="selects" id="day" >
-                    			<option value="日期">日期</option>
-                    			<option value="不确定">不确定</option>
-                    		</select><br/>
-                    <span style="margin-left:40px;">旅行天数:</span>&nbsp;<select class="selects">
-                    			<option value="请选择">请选择</option>
-                                <option value="1天">1天</option>
-                                <option value="2天">2天</option>
-                                <option value="3天">3天</option>
-                                <option value="4天">4天</option>
-                                <option value="5天">5天</option>
-                                <option value="6天">6天</option>
-                                <option value="7天">7天</option>
-                                <option value="8天">8天</option>
-                                <option value="9天及以上">9天及以上</option>
-                    		</select><br/>
-                     <span style="margin-left:40px;">出行人数:</span>&nbsp;<select class="selects">
-                    			<option value="请选择">请选择</option>
-                                <option value="1人">1人</option>
-                                <option value="2人">2人</option>
-                                <option value="3人">3人</option>
-                                <option value="4人">4人</option>
-                                <option value="5人">5人</option>
-                                <option value="6人">6人</option>
-                                <option value="7人">7人</option>
-                                <option value="8人">8人</option>
-                                <option value="9人及以上">9人及以上</option>
-                    		</select><br/> 
-                     <span style="margin-left:40px;">其中儿童:</span>&nbsp;<select class="selects">
-                    			<option value="无">无</option>
-                                <option value="1人">1人</option>
-                                <option value="2人">2人</option>
-                                <option value="3人">3人</option>
-                                <option value="4人">4人</option>
-                                <option value="5人">5人</option>
-                                <option value="6人">6人</option>
-                                <option value="7人">7人</option>
-                                <option value="8人">8人</option>
-                                <option value="9人及以上">9人及以上</option>
-                    		</select><br/>
-                     <span style="margin-left:40px;">其中老人:</span>&nbsp;<select class="selects">
-                    			<option value="无">无</option>
-                                <option value="1人">1人</option>
-                                <option value="2人">2人</option>
-                                <option value="3人">3人</option>
-                                <option value="4人">4人</option>
-                                <option value="5人">5人</option>
-                                <option value="6人">6人</option>
-                                <option value="7人">7人</option>
-                                <option value="8人">8人</option>
-                                <option value="9人及以上">9人及以上</option>
-                    		</select><br/>
-                     <span style="margin-left:40px;">其他要求:</span>&nbsp;<textarea rows="5" cols="50" id="contents"></textarea><br/>
-                     <input type="button" value="下一步" id="next_1" onclick="next1()" />
-                </form>
-                <form class="custform"   id="custform2">
-                	<div id="fromtop">
-                			<a href="javascript:void(0)"  class="al1"><li id="l6">湖南</li></a>
-                			<li id="l7"></li>	
-                	</div>
-                	<div id="fromattric">
-                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">长沙市</li></a>
-                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">株洲市</li></a>
-                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">湘潭市</li></a>
-                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">衡阳市</li></a>
-                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">邵阳市</li></a>
-                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">岳阳市</li></a>
-                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">张家界市</li></a>
-                			<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">益阳市</li></a>
-							<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">常德市</li></a>
-							<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">娄底市</li></a>
-							<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">郴州市</li></a>
-							<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">永州市</li></a>
-							<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">怀化市</li></a>
-							<a href="javascript:void(0)"  class="al2"  onclick="check()"><li id="l8">湘西自治州</li></a>
-                	</div>
-                	<p id="p6">还不确定目的地，<a href="javascript:void(0)"  id="a1" onclick="next2()">点这里</a></p>
-                	<input type="button" value="下一步" id="next_1" onclick="next2()" /><a href="javascript:void(0)"  id="a2" onclick="return1()">返回重新选择</a>
-                </form>
-                 <form class="custform"   id="custform3">
-                 	<p id="p7">旅游喜好</p><br/><br/>
-                 	<div id="tracelike">
-                 		<a href="javascript:void(0)"  ><img class="al3"  src="images/fengguang.png"></a>
-                 		<a href="javascript:void(0)"  ><img class="al3" src="images/gouwu.png"></a>
-                 		<a href="javascript:void(0)"  ><img  class="al3" src="images/lishi.png"></a>
-                 		<a href="javascript:void(0)"  ><img class="al3" src="images/meishi.png"></a>
-                 		<a href="javascript:void(0)"  ><img class="al3" src="images/yiji.png"></a>
-                 		<a href="javascript:void(0)"  ><img class="al3" src="images/zongjiao.png"></a>
-                 	</div>
-                	<input type="button" value="提交预约" id="next_1" onclick="commitNeed()" /><a href="javascript:void(0)"  id="a2" onclick="return2()">返回重新选择</a>
+            	<form class="custform"  >
+            		<div id="custform1">
+	            		<p id="pp">基本信息</p><br/><br/><br/>
+	                	<span style="margin-left:40px;">出行日期:</span>&nbsp;<select  class="selects" id="year"onclick="checkYear()">
+	                    			
+	                    		</select>
+	                            <select class="selects" id="month"  onclick="checkMon()">
+	                    			<option value="月份">月份</option>
+	                    			<option value="不确定">不确定</option>
+	                    		</select>
+	                            <select class="selects" id="day"  >
+	                    			<option value="日期">日期</option>
+	                    			<option value="不确定">不确定</option>
+	                    		</select><br/>
+	                    <span style="margin-left:40px;">旅行天数:</span>&nbsp;<select class="selects" id="days">
+	                    			<option value="请选择">请选择</option>
+	                                <option value="1天">1天</option>
+	                                <option value="2天">2天</option>
+	                                <option value="3天">3天</option>
+	                                <option value="4天">4天</option>
+	                                <option value="5天">5天</option>
+	                                <option value="6天">6天</option>
+	                                <option value="7天">7天</option>
+	                                <option value="8天">8天</option>
+	                                <option value="9天及以上">9天及以上</option>
+	                    		</select><br/>
+	                     <span style="margin-left:40px;">出行人数:</span>&nbsp;<select class="selects" id="peoples"  onclick="checkPeoples()">
+	                    			<option value="请选择">请选择</option>
+	                                <option value="1">1人</option>
+	                                <option value="2">2人</option>
+	                                <option value="3">3人</option>
+	                                <option value="4">4人</option>
+	                                <option value="5">5人</option>
+	                                <option value="6">6人</option>
+	                                <option value="7">7人</option>
+	                                <option value="8">8人</option>
+	                                <option value="9">9人及以上</option>
+	                    		</select><br/> 
+	                     <span style="margin-left:40px;">其中儿童:</span>&nbsp;<select class="selects" id="childs"   onclick="checkChilds()">
+	                    			<option value="请选择">请选择</option> 
+	                    		</select><br/>
+	                     <span style="margin-left:40px;">其中老人:</span>&nbsp;<select class="selects" id="oldman"  >
+	                    			<option value="请选择">请选择</option>
+	                    		</select>
+	                    		<p id="pp2"></p>  <br/><br/>      
+	                     <input type="button" value="下一步" id="next_1" onclick="next1()" />
+                     </div>
+                     <div id="custform2">
+	                     <div id="fromtop">
+	                	</div>
+	                	<div id="fromattric">
+	                	</div>
+	                	<p id="p6">还不确定目的地，<a href="javascript:void(0)"  id="a1" onclick="next2()">点这里</a></p>
+	                	<input type="button" value="下一步" id="next_1" onclick="next2()" /><a href="javascript:void(0)"  id="a2" onclick="return1()">返回重新选择</a>
+	                  </div>
+                     <div id="custform3">
+	                     <p id="p7">旅游喜好</p><br/><br/>
+	                 	 <div id="tracelike">
+	                 	</div>
+	                	<input type="button" value="提交预约" id="next_1" onclick="commitNeed()" /><a href="javascript:void(0)"  id="a2" onclick="return2()">返回重新选择</a>
+                      </div>
                 </form>
             </div>
     </article>

@@ -7,8 +7,8 @@ import com.yc.tn.entity.LocationEntity;
 
 public interface LocationMapper {
 
-	List<LocationEntity> getLocationList(int userid);
-
 	List<LocationEntity> getAllLocation(LocationEntity locationEntity);
+
+	String getScenicType(int tag_Id);
 
 }

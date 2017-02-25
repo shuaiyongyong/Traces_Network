@@ -8,33 +8,36 @@ map.addControl(new BMap.MapTypeControl());		// 添加地图类型控件
 map.addControl(new BMap.OverviewMapControl());	// 添加缩略地图控件
 
 $(function(){
-	search();
+	var str=window.location.href; //取得整个地址栏	
+	num=str.indexOf("?") 
+	str=str.substr(num+1);
+	search(str);
 })
 
-function search(){
+function search(str){
 	$.ajax({
-		url : 'location/addr?action=map&userid=1',
+		url : 'location/addr?'+str,
 		data : $('#searchForm').serialize(),
 		type : "post",
 		cache : false,
 		success : function(data) {
-			var result = eval('(' + data + ')');
+//			alert(JSON.stringify(data));.
+//			var result = eval("("+data+")");//转换为json对象 
+			var result = data;
 			map.clearOverlays();									// 清除标注信息
 		    var points = [];										// 添加折线运动轨迹
 			for(i=0;i<result.length;i++)
 		    {
-				var userid = result[i].userid;						// 用户ID
-		    	var longitude = result[i].longitude;				// 经度
-		    	var latitude = result[i].latitude;					// 纬度
-		    	var address = result[i].address;					// 地点
-		    	var sign_time = result[i].datetime;					// 签到时间
+		    	var longitude = result[i].scenic_Longitude;				// 经度
+		    	var latitude = result[i].scenic_Latitude;					// 纬度
+		    	var address = result[i].scenic_Name;					// 地点
 		    	
 		    	var point = new BMap.Point(longitude, latitude);	// 填充标注点
 		    	if(i==0)
 		    	{
 		    		map.setCenter(point);							// 设置中心坐标
 		    	}
-		    	var tips = userid + "，" + sign_time + "，" + address;
+		    	var tips = address;
 		    	addMarker(point, map, tips);
 		    	points.push(point);
 		    }

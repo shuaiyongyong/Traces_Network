@@ -16,15 +16,15 @@ public class LocationServiceImpl implements LocationService {
 	private LocationMapper locationMapper;
 	
 	@Override
-	public List<LocationEntity> getLocationList(int userid) {
-		return locationMapper.getLocationList(userid);
+	public List<LocationEntity> getAllLocation(LocationEntity locationEntity) {
+		return locationMapper.getAllLocation(locationEntity);
 	}
 
 
 	@Override
-	public List<LocationEntity> getAllLocation(LocationEntity locationEntity) {
-		// TODO Auto-generated method stub
-		return locationMapper.getAllLocation(locationEntity);
+	public String getScenicType(int tag_Id) {
+		return locationMapper.getScenicType(tag_Id);
 	}
+
 
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间 与 对应的 映射接口 的 全类名 必须保持一致 -->
+<mapper namespace="com.yc.tn.mapper.UserMapper">
+
+	<select id="findUser" parameterType="UserEntity" resultType="com.yc.tn.entity.UserEntity">
+		select * from users where User_UserName=#{User_UserName} and User_UserPassword=#{User_UserPassword}
+	</select>
+	
+	<select id="checkTel" parameterType="String" resultType="com.yc.tn.entity.UserEntity">
+		select * from users where User_Phone=#{utel} 
+	</select>
+	
+</mapper>

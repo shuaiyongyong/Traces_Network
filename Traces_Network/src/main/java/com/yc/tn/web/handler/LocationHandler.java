@@ -32,15 +32,15 @@ public class LocationHandler {
 	public List<LocationEntity> maps(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		request.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
-		String action = request.getParameter("action");
+		int scenic_Level =Integer.parseInt(request.getParameter("scenic_Level"));
+		int city_Id=Integer.parseInt(request.getParameter("city_Id"));
+		int tag_Id=Integer.parseInt(request.getParameter("tag_Id"));
+		String scenic_Type = locationService.getScenicType(tag_Id);
 		LocationEntity  locationEntity = new LocationEntity();
-		locationEntity.setUserid(1);
-		int userid=Integer.valueOf(request.getParameter("userid"));
-		if ("map".equals(action)) {
-			System.out.println(locationService.getAllLocation(locationEntity));
-			return locationService.getAllLocation(locationEntity);
-		} else {
-			return locationService.getLocationList(userid);
-		}
+		locationEntity.setScenic_Level(scenic_Level);
+		locationEntity.setCity_Id(city_Id);
+		locationEntity.setScenic_Type(scenic_Type);
+
+		return  locationService.getAllLocation(locationEntity);
 	}
 }
