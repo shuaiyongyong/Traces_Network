@@ -1,12 +1,10 @@
 package com.yc.tn.service;
 
 import java.util.List;
-import java.util.Map;
-
-import com.yc.tn.entity.Users;
+import com.yc.tn.entity.UserEntity;
 
 public interface JingxuanService {
 
-	List<Users> allInfo();
+	List<UserEntity> allInfo();
 
 }

@@ -11,10 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.yc.tn.entity.Users;
+import com.yc.tn.entity.UserEntity;
 import com.yc.tn.service.JingxuanService;
-
-
 
 @Controller
 @RequestMapping("/jingxuan")
@@ -25,9 +23,9 @@ public class jingxuanxiangqingHandler {
 	
 	@RequestMapping("/info")
 	@ResponseBody
-	public List<Users> allInfo(HttpSession session){
+	public List<UserEntity> allInfo(HttpSession session){
 		LogManager.getLogger().debug("获取所有的攻略信息...");
-		 List<Users> users = jingxuanService.allInfo();
+		 List<UserEntity> users = jingxuanService.allInfo();
 		 System.out.println(users);
 		 return users;
 	}

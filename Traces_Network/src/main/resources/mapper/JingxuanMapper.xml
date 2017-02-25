@@ -4,9 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 命名空间 与 对应的 映射接口 的 全类名 必须保持一致 -->
 <mapper namespace="com.yc.tn.mapper.JingxuanMapper">
-	
-	
-	<resultMap type="Users" id="UsersMap">
+	<resultMap type="UserEntity" id="UsersMap">
 		<id property="User_Id" column="User_Id" />
 		<result property="User_UserName" column="User_UserName" />
 		<result property="User_UserPassword" column="User_UserPassword" />
@@ -33,6 +31,5 @@
 	<select id="allInfo" resultMap="UsersMap">
 		select * from strategyInfo str join users u on u.User_Id = str.User_Id
 	</select>
-	
-	
+
 </mapper>

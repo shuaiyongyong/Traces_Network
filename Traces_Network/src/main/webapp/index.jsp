@@ -17,7 +17,6 @@
     	<div class="top">
         	<a href="index.jsp"><img src="images/logo.jpg"/></a>
             <li id="l1"><a href="index.jsp">首页</a></li>
-<<<<<<< HEAD
             <li class="l2"><a href="page/custom.jsp">定制旅行</a></li>
             <li class="l2"><a href="#">经典路线</a></li>
             <li class="l2"><a href="#">深度推荐</a></li>
@@ -28,22 +27,10 @@
 						<li><a href="page/youji.jsp">游记</a></li>
 				</ul>
 			</li>
-            <li class="l2"><a href="#">你问我答</a></li>
-            <li class="l2"><a href="#">关于我们</a></li>
-=======
-            <li id="l2"><a href="page/custom.jsp">定制旅行</a></li>
-            <li id="l2"><a href="#">经典路线</a></li>
-            <li id="l2"><a href="#">深度推荐</a></li>
-            <li id="l2"><a href="#">达人攻略</a></li>
             <li id="l2"><a href="page/quList.jsp">你问我答</a></li>
             <li id="l2"><a href="#">关于我们</a></li>
->>>>>>> branch 'master' of https://github.com/shuaiyongyong/Traces_Network
             <li id="l3"><a href="page/customize.jsp" target="_blank">立即定制</a></li>
-<<<<<<< HEAD
-            <li id="l4"><a href="page/userlogin.jsp">登录</a></li>
-=======
             <li id="l4"><a href="page/login.jsp">登录</a></li>
->>>>>>> branch 'master' of https://github.com/shuaiyongyong/Traces_Network
             <li id="l5"></li>
             <li id="l4"><a href="#" id="reg">注册</a></li>
         </div>

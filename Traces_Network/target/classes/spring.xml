@@ -16,10 +16,9 @@
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-        
-    <context:component-scan base-package="com.yc.tn"/>
-
-    <context:property-placeholder location="classpath:db.properties"/>
+	<context:component-scan base-package="com.yc.tn" />
+	<context:property-placeholder location="classpath:db.properties" />
+   
 	<!-- 配置数据源 -->
 
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
@@ -34,13 +33,33 @@
 		<property name="validationQuery" value="${jdbc.validationQuery}"/>
 
 	</bean>
+	<!-- <bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
+		<property name="dataSource" ref="dataSource" /> <property name="typeAliasesPackage" 
+		value="com.yc.tn.entity" /> <property name="mapperLocations" value="classpath:mapper/*Mapper.xml" 
+		/> 配制mybatis与spring整合的SqlSessionFactory的对象 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
+		<property name="dataSource" ref="dataSource" /> <property name="typeAliasesPackage" 
+		value="com.yc.tn.entity" /> <property name="mapperLocations" value="classpath:mapper/*Mapper.xml" 
+		/> </bean> <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"> 
+		<property name="basePackage" value="com.yc.tn.mapper" /> <property name="sqlSessionFactoryBeanName" 
+		value="SqlSessionFactory" /> </bean> <property name="basePackage" value="com.yc.tn.mapper" 
+		/> <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" /> 
+		</bean> -->
+
+	<!-- 邮件发送配制 -->
+	<!-- <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"> 
+		<property name="host" value="${mail.smtp.host}"/> <property name="username" 
+		value="${mail.smtp.username}"/> <property name="password" value="${mail.smtp.password}"/> 
+		<property name="javaMailProperties"> <props> <prop key="mail.smtp.auth">${mail.smtp.auth}</prop> 
+		<prop key="mail.smtp.timeout">${mail.smtp.timeout}</prop> </props> </property> 
+		</bean> -->
+
 	<bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource"/>
-		<property name="typeAliasesPackage" value="com.yc.tn.entity"/>
-		<property name="mapperLocations" value="classpath:mapper/*Mapper.xml"/>
+		<property name="dataSource" ref="dataSource" />
+		<property name="typeAliasesPackage" value="com.yc.tn.entity" />
+		<property name="mapperLocations" value="classpath:mapper/*Mapper.xml" />
 	</bean>
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.yc.tn.mapper"/>
-		<property name="sqlSessionFactoryBeanName" value="SqlSessionFactory"/>
+		<property name="basePackage" value="com.yc.tn.mapper" />
+		<property name="sqlSessionFactoryBeanName" value="SqlSessionFactory" />
 	</bean>
 </beans>

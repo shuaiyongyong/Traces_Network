@@ -21,7 +21,7 @@ public class UserHandler {
 
 	@Autowired
 	private UserService userService;
-	
+
 	@RequestMapping("/numLogin")
 	public String doNumLogin(UserEntity user,ModelMap map){
 		user = userService.login(user);
@@ -33,7 +33,7 @@ public class UserHandler {
 		map.put("errorMsg", "用户名或密码错误");
 		return "forward:/page/login.jsp";
 	}
-	
+
 	//手机验证码登录,为以防万一，做手机号验证
 	@RequestMapping("/checkCode")
 	@ResponseBody
@@ -41,7 +41,7 @@ public class UserHandler {
 		String utel=request.getParameter("utel");
 		String rCode=request.getParameter("text");
 		String sCode=null;
-		
+
 		if(request.getSession().getAttribute("code")==null){
 			request.getSession().setAttribute("errorMsg", "验证码还未发送...");
 			response.sendRedirect("../page/login.jsp");
@@ -49,7 +49,7 @@ public class UserHandler {
 		}else{
 			sCode=request.getSession().getAttribute("code").toString();
 		}
-		
+
 		if(userService.checkTel(utel) && rCode.intern()==sCode.intern()){
 			request.getSession().setAttribute("loginUser", utel);
 			response.sendRedirect("../page/admin.jsp");

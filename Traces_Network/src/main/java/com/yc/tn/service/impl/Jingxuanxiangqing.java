@@ -5,8 +5,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.yc.tn.entity.Users;
+import com.yc.tn.entity.UserEntity;
 import com.yc.tn.mapper.JingxuanMapper;
 import com.yc.tn.service.JingxuanService;
 
@@ -17,7 +16,7 @@ public class Jingxuanxiangqing implements JingxuanService {
 	private JingxuanMapper jingxuanMapper;
 	
 	@Override
-	public List<Users> allInfo() {
+	public List<UserEntity> allInfo() {
 		return jingxuanMapper.allInfo();
 	}
 

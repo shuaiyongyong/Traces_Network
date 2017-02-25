@@ -78,7 +78,6 @@
             <p id="p3">技术支持：<a href="page/login.jsp">gCoder工作室</a> </p>
         </div>
     </footer>
- 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-	<!-- <script type="text/javascript" src="js/user.js"></script> -->
+ 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 </body>
 </html>

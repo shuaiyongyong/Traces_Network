@@ -92,28 +92,28 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.6.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-		
+
 		<!-- 数据库驱动包 -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.38</version>
 		</dependency>
-		
+
 		<!-- gson包 -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.7</version>
 		</dependency>
-		
 		<!-- 文件上传包 -->
+		<!-- 文件上传操作 -->
 		<dependency>
 			<groupId>com.jspsmart.upload</groupId>
 			<artifactId>smartupload</artifactId>
@@ -124,3 +124,4 @@
 		<finalName>Traces_Network</finalName>
 	</build>
 </project>
+

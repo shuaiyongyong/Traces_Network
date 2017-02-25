@@ -1,6 +1,7 @@
 package com.yc.tn.entity;
 
 import java.util.Date;
+import java.util.List;
 
 public class UserEntity {
 
@@ -13,6 +14,9 @@ public class UserEntity {
 	private String User_Email;//邮箱
 	private String User_Adress;//地址
 	private String User_Phone;//电话
+	private List<AskInfo> askInfo;
+	private List<Answer> answer;
+	private List<StrategyInfo> strategyInfo;
 	
 	public UserEntity() {
 		super();
@@ -21,7 +25,8 @@ public class UserEntity {
 	public UserEntity(int user_Id, String user_UserName,
 			String user_UserPassword, String user_Sex, Date user_Date,
 			String user_Pic, String user_Email, String user_Adress,
-			String user_Phone) {
+			String user_Phone, List<AskInfo> askInfo, List<Answer> answer,
+			List<StrategyInfo> strategyInfo) {
 		super();
 		User_Id = user_Id;
 		User_UserName = user_UserName;
@@ -32,7 +37,13 @@ public class UserEntity {
 		User_Email = user_Email;
 		User_Adress = user_Adress;
 		User_Phone = user_Phone;
+		this.askInfo = askInfo;
+		this.answer = answer;
+		this.strategyInfo = strategyInfo;
 	}
+
+
+
 
 	public int getUser_Id() {
 		return User_Id;
@@ -106,6 +117,34 @@ public class UserEntity {
 		User_Phone = user_Phone;
 	}
 
+	public List<AskInfo> getAskInfo() {
+		return askInfo;
+	}
+
+
+	public void setAskInfo(List<AskInfo> askInfo) {
+		this.askInfo = askInfo;
+	}
+
+
+	public List<Answer> getAnswer() {
+		return answer;
+	}
+
+
+	public void setAnswer(List<Answer> answer) {
+		this.answer = answer;
+	}
+
+
+	public List<StrategyInfo> getStrategyInfo() {
+		return strategyInfo;
+	}
+
+	public void setStrategyInfo(List<StrategyInfo> strategyInfo) {
+		this.strategyInfo = strategyInfo;
+	}
+
 	@Override
 	public String toString() {
 		return "UserEntity [User_Id=" + User_Id + ", User_UserName="
@@ -113,8 +152,8 @@ public class UserEntity {
 				+ ", User_Sex=" + User_Sex + ", User_Date=" + User_Date
 				+ ", User_Pic=" + User_Pic + ", User_Email=" + User_Email
 				+ ", User_Adress=" + User_Adress + ", User_Phone=" + User_Phone
-				+ "]";
+				+ ", askInfo=" + askInfo + ", answer=" + answer
+				+ ", strategyInfo=" + strategyInfo + "]";
 	}
-	
 	
 }
