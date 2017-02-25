@@ -11,11 +11,13 @@ public class StrategyInfo {
 	private String strategyInfo_Picture;//图片
 	private int user_Id;//发布者编号
 	private int status;//审核状态
+	private String reason;//审核理由
 	private int strategyInfo_Click;//点击率
 	private Date strategyInfo_AddTime;//发布时间
 	
 	public StrategyInfo(int strategyInfo_Id, int strategy_Id, String strategyInfo_Title, String strategyInfo_Content,
-			String strategyInfo_Picture, int user_Id, int status, int strategyInfo_Click, Date strategyInfo_AddTime) {
+			String strategyInfo_Picture, int user_Id, int status, String reason, int strategyInfo_Click,
+			Date strategyInfo_AddTime) {
 		super();
 		this.strategyInfo_Id = strategyInfo_Id;
 		this.strategy_Id = strategy_Id;
@@ -24,6 +26,7 @@ public class StrategyInfo {
 		this.strategyInfo_Picture = strategyInfo_Picture;
 		this.user_Id = user_Id;
 		this.status = status;
+		this.reason = reason;
 		this.strategyInfo_Click = strategyInfo_Click;
 		this.strategyInfo_AddTime = strategyInfo_AddTime;
 	}
@@ -88,6 +91,14 @@ public class StrategyInfo {
 		this.status = status;
 	}
 
+	public String getReason() {
+		return reason;
+	}
+
+	public void setReason(String reason) {
+		this.reason = reason;
+	}
+
 	public int getStrategyInfo_Click() {
 		return strategyInfo_Click;
 	}
@@ -109,7 +120,8 @@ public class StrategyInfo {
 		return "StrategyInfo [strategyInfo_Id=" + strategyInfo_Id + ", strategy_Id=" + strategy_Id
 				+ ", strategyInfo_Title=" + strategyInfo_Title + ", strategyInfo_Content=" + strategyInfo_Content
 				+ ", strategyInfo_Picture=" + strategyInfo_Picture + ", user_Id=" + user_Id + ", status=" + status
-				+ ", strategyInfo_Click=" + strategyInfo_Click + ", strategyInfo_AddTime=" + strategyInfo_AddTime + "]";
+				+ ", reason=" + reason + ", strategyInfo_Click=" + strategyInfo_Click + ", strategyInfo_AddTime="
+				+ strategyInfo_AddTime + "]";
 	}
 	
 }

@@ -33,6 +33,7 @@ article .article_botton{
 	margin-top:10px;
 	width:80%;
 	height:97%;
+/* 	overflow:auto; */
 }
 
 article .article_botton div{
@@ -41,7 +42,10 @@ article .article_botton div{
 	background:white;
 	height:220px;
 	border:1px double gray;
-	background-image:url(../images/1.jpg);
+	/* background-image:url(../images/1.jpg); */
+}
+article .article_botton .d1 {
+	float:left;
 }
 article .article_botton .d1 img{
 	width:80%;
@@ -57,3 +61,13 @@ article .article_botton .d1 p{
 article .article_botton .d1 a{
 	text-decoration:none;
 }
+
+#pList{
+	margin-top:-40px;
+	margin-left:900px;
+}
+
+.l2:hover .content{
+	display:block !important;
+}
+

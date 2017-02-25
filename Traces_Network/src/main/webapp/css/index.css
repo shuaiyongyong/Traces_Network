@@ -79,3 +79,7 @@ article{
 	height:800px;
 	background:#0F0;
 }
+
+.l2:hover .content{
+	display:block !important;
+}

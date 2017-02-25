@@ -14,13 +14,19 @@
     	<div class="top">
         	<a href="index.jsp"><img src="images/logo.jpg"/></a>
             <li id="l1"><a href="index.jsp">首页</a></li>
-            <li id="l2"><a href="page/custom.jsp">定制旅行</a></li>
-            <li id="l2"><a href="#">经典路线</a></li>
-            <li id="l2"><a href="#">深度推荐</a></li>
-            <li id="l2"><a href="#">达人攻略</a></li>
-            <li id="l2"><a href="#">你问我答</a></li>
-            <li id="l2"><a href="#">关于我们</a></li>
-            <li id="l3"><a href="customize.jsp" target="_blank">立即定制</a></li>
+            <li class="l2"><a href="page/custom.jsp">定制旅行</a></li>
+            <li class="l2"><a href="#">经典路线</a></li>
+            <li class="l2"><a href="#">深度推荐</a></li>
+            <li class="l2 daren">
+            	<a href="page/lutan.jsp">达人攻略</a>
+            	<ul class="content" style="width:80px; overflow: hidden; background:#CCCCCC;display:none">
+						<li><a href="page/jingxuan.jsp">精选</a></li>
+						<li><a href="page/youji.jsp">游记</a></li>
+				</ul>
+			</li>
+            <li class="l2"><a href="#">你问我答</a></li>
+            <li class="l2"><a href="#">关于我们</a></li>
+            <li id="l3"><a href="page/customize.jsp" target="_blank">立即定制</a></li>
             <li id="l4"><a href="#">登录</a></li>
             <li id="l5"></li>
             <li id="l4"><a href="#" id="reg">注册</a></li>
@@ -41,7 +47,7 @@
             <li id="l8"><a href="#">成为达人</a></li>
         </div>
         <div class="article_bottom">
-        	<div></div>
+        	<div class="d1"></div>
         	<div></div>
         	<div></div>
         	<div></div>
@@ -72,6 +78,7 @@
             <p id="p3">技术支持：<a href="page/login.jsp">gCoder工作室</a> </p>
         </div>
     </footer>
-
+ 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<!-- <script type="text/javascript" src="js/user.js"></script> -->
 </body>
 </html>

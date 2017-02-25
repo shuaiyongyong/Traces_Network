@@ -120,5 +120,16 @@ article{
 	background:white;
 	height:220px;
 	border:1px double gray;
-	background-image:url(../images/1.jpg);
+/* 	background-image:url(../images/1.jpg); */
+}
+
+.l2:hover .content{
+	display:block !important;
+}
+
+article .article_bottom .d1 img{
+	width:80%;
+	height:80%;
+	padding-left:20px;
+	padding-top:10px;
 }
