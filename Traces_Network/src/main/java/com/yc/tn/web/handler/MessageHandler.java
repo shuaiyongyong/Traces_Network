@@ -18,11 +18,6 @@ import com.taobao.api.request.AlibabaAliqinFcSmsNumSendRequest;
 import com.taobao.api.response.AlibabaAliqinFcSmsNumSendResponse;
 import com.yc.tn.util.BaseServlet;
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> branch 'master' of https://github.com/shuaiyongyong/Traces_Network
 @RequestMapping("/message")
 @ResponseBody
 public class MessageHandler extends BaseServlet{
