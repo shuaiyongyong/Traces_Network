@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间 与 对应的 映射接口 的 全类名 必须保持一致 -->
+<mapper namespace="com.yc.tn.mapper.StrategyInfoMapper">
+	
+	<!-- 定义sql变量 -->
+	<sql id="selectProfile">
+		select * from StrategyInfo
+	</sql>
+	
+	<select id="allInfo" resultType="StrategyInfo">
+		select * from strategyInfo order by strategyInfo_Click desc
+	</select>
+	
+	<select id="partInfo" resultType="StrategyInfo" parameterType="int">
+		select * from strategyInfo where strategyInfo_Id = #{type}
+	</select>
+	
+	<!-- 使用嵌套查询到的方式处理分页 -->
+	<resultMap type="PaginationBean" id="paginationBeanMap">
+		<collection property="rows" column="{pageSize=pageSize, currPage=currPage}" ofType="StrategyInfo" select="getStrategyInfo"/>
+	</resultMap>
+	
+	<!-- #{}是采用占位符    
+		 ${}是直接取到值, 
+	 -->
+	<select id="getStrategyInfoByPagination" parameterType="PaginationBean" resultMap="paginationBeanMap">
+		select count(1) total, ceil(count(1) / ${pageSize}) totalPage, ${pageSize} pageSize, ${currPage} currPage from StrategyInfo
+	</select>
+	
+	<select id="getStrategyInfo" resultType="StrategyInfo">
+		select * from
+		(select m.*,rownum rn from
+		(<include refid="selectProfile"/> order by 1 desc) m where  ${currPage} * ${pageSize} >= rownum) where rn > (${currPage}-1) * ${pageSize}
+	</select>
+</mapper>

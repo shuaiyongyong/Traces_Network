@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间 与 对应的 映射接口 的 全类名 必须保持一致 -->
+<mapper namespace="com.yc.tn.mapper.JingxuanMapper">
+	
+	
+	<resultMap type="Users" id="UsersMap">
+		<id property="User_Id" column="User_Id" />
+		<result property="User_UserName" column="User_UserName" />
+		<result property="User_UserPassword" column="User_UserPassword" />
+		<result property="User_Sex" column="User_Sex" />
+		<result property="User_Date" column="User_Date" />
+		<result property="User_Pic" column="User_Pic" />
+		<result property="User_Email" column="User_Email" />
+		<result property="User_Adress" column="User_Adress" />
+		<result property="User_Phone" column="User_Phone" />
+		<collection property="strategyInfo" ofType="StrategyInfo">
+			<id property="strategyInfo_Id" column="strategyInfo_Id" />
+			<result property="strategy_Id" column="strategy_Id" />
+			<result property="strategyInfo_Title" column="strategyInfo_Title" />
+			<result property="strategyInfo_Content" column="strategyInfo_Content" />
+			<result property="strategyInfo_Picture" column="strategyInfo_Picture" />
+			<result property="user_Id" column="user_Id" />
+			<result property="strategyInfo_Click" column="strategyInfo_Click" />
+			<result property="strategyInfo_AddTime" column="strategyInfo_AddTime" />
+		</collection>
+	</resultMap>
+
+	<!--resultMap接收结果集 -->
+	<!-- 嵌套查询处理取到数据 -->
+	<select id="allInfo" resultMap="UsersMap">
+		select * from strategyInfo str join users u on u.User_Id = str.User_Id
+	</select>
+	
+	
+</mapper>
