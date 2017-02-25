@@ -6,7 +6,7 @@
 <mapper namespace="com.yc.tn.mapper.LocationMapper">
 
 	<select id="getAllLocation" parameterType="LocationEntity" resultType="com.yc.tn.entity.LocationEntity">
-		select * from (select * from scenic where city_Id=#{city_Id} and scenic_Level &gt;= #{scenic_Level} and scenic_Type like '%${scenic_Type}%' order by scenic_Id asc) where rownum <=6
+		select * from scenic where city_Id=#{city_Id} and scenic_Level &gt;= #{scenic_Level} and scenic_Type like '%${scenic_Type}%' 
 	</select>
 	
 	<select id="getScenicType" parameterType="int" resultType="String">
