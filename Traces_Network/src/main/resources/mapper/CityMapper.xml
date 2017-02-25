@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间 与 对应的 映射接口 的 全类名 必须保持一致 -->
+<mapper namespace="com.yc.tn.mapper.CityMapper">
+	
+	<select id="allCity" resultType="com.yc.tn.entity.CityEntity">
+		select * from city where region_Id = 1
+	</select>
+	
+	<select id="cityList" parameterType="int" resultType="com.yc.tn.entity.CityEntity">
+		select * from city where region_Id =#{region_Id}
+	</select>
+	
+</mapper>
