@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <!-- 命名空间与对应映射接口的全类名一致 -->
+<mapper namespace="com.yc.tn.mapper.QuMapper">
+
+	<!-- 最新 -->
+	<resultMap type="User" id="UserMap">
+	 	<id property="user_Id" column="user_Id"></id>
+	 	<result property="userName" column="userName"></result>
+	 	<result property="userPassword" column="userPassword"></result>
+	 	<result property="user_trueName" column="user_trueName"></result>
+	 	<result property="user_sex" column="user_sex"></result>
+	 	<result property="user_birthday" column="user_birthday"></result>
+	 	<result property="user_pic" column="user_pic"></result>
+	 	<result property="user_email" column="user_email"></result>
+	 	<result property="user_adress" column="user_adress"></result>
+	 	<result property="user_phone" column="user_phone"></result>
+	 	<result property="user_config" column="user_config"></result>
+	 	<collection property="askInfo" ofType="AskInfo">
+	 		<id property="ask_Id" column="ask_Id"></id>
+		 	<result property="user_Id" column="user_Id"></result>
+		 	<result property="ask_Content" column="ask_Content"></result>
+		 	<result property="ask_status" column="ask_status"></result>
+		 	<result property="ask_time" column="ask_time"></result>
+	 	</collection>
+	 </resultMap>
+	 
+	 <select id="findAsk" resultMap="UserMap">
+	 	select ai.ask_Id,ai.user_Id,username,ask_Content,ask_Time from USERS join askInfo ai on ai.user_Id=users.user_Id 
+	 	order by ai.ask_Time desc
+	 </select>
+	 
+	 <!-- 结果集映射 使用嵌套查询的方式，处理分页 -->
+	<!-- <resultMap type="PaginationBean" id="PaginationBeanMap">
+		<collection property="rows"
+			column="{pageSize=pageSize,currPage=currPage}" select="findAsk">
+		</collection>
+	</resultMap> -->
+	 
+	 <!-- 标签 -->
+	 <resultMap type="TagRel" id="TagMap">
+	 	<id property="id" column="id"></id>
+	 	<result property="ask_Id" column="ask_Id"></result>
+	 	<result property="tag_Id" column="tag_Id"></result>
+	 	<collection property="tagInfo" ofType="TagInfo">
+	 		<id property="tag_Id" column="tag_Id"></id>
+		 	<result property="tagName" column="tagName"></result>
+	 	</collection>
+	 </resultMap>
+	 
+	 <!-- qulist标签 -->
+	 <select id="findTag" resultMap="TagMap">
+	 	select * from tagInfo ti join tagRel tr on ti.tag_Id=tr.tag_Id where tr.ask_Id = #{id}
+	 </select>
+	  <!-- quDetail标签 -->
+	 <select id="findAnswerTag" resultMap="TagMap">
+	 	select * from tagInfo ti join tagRel tr on ti.tag_Id=tr.tag_Id where tr.ask_Id = #{askId}
+	 </select>
+	 
+	 <!-- 最热 -->
+	 <select id="findAskByClick" resultMap="UserMap">
+	 	select ai.ask_Id,ai.user_Id,username,ask_Content,ask_Time from USERS join askInfo ai on ai.user_Id=users.user_Id 
+	 	order by ai.ask_Click desc
+	 </select>
+	 
+	 <!-- 已采纳 -->
+	 <select id="findAskBySt1" resultMap="UserMap">
+	 	select ai.ask_Id,ai.user_Id,username,ask_Content,ask_Time from USERS join askInfo ai on ai.user_Id=users.user_Id 
+	 	where ai.ask_status=1
+	 </select>
+	 
+	 <!-- 未采纳 -->
+	 <select id="findAskBySt2" resultMap="UserMap">
+	 	select ai.ask_Id,ai.user_Id,username,ask_Content,ask_Time from USERS join askInfo ai on ai.user_Id=users.user_Id 
+	 	where ai.ask_status=0
+	 </select>
+	 
+	 <!-- 回复问题 -->
+	 <select id="findAnswer" resultMap="UserMap">
+	 	select ai.ask_Id,ai.user_Id,username,ask_Content,ask_Time from USERS join askInfo ai on ai.user_Id=users.user_Id 
+	 	where ai.ask_Id=#{askId}
+	 </select>
+	 
+	 <!-- 回复内容 -->
+	 <resultMap type="User" id="UserMap2">
+	 	<id property="user_Id" column="user_Id"></id>
+	 	<result property="userName" column="userName"></result>
+	 	<result property="userPassword" column="userPassword"></result>
+	 	<result property="user_trueName" column="user_trueName"></result>
+	 	<result property="user_sex" column="user_sex"></result>
+	 	<result property="user_birthday" column="user_birthday"></result>
+	 	<result property="user_pic" column="user_pic"></result>
+	 	<result property="user_email" column="user_email"></result>
+	 	<result property="user_adress" column="user_adress"></result>
+	 	<result property="user_phone" column="user_phone"></result>
+	 	<result property="user_config" column="user_config"></result>
+	 	<collection property="answer" ofType="Answer">
+	 		<id property="answer_Id" column="answer_Id"></id>
+		 	<result property="user_Id" column="user_Id"></result>
+		 	<result property="ask_Id" column="ask_Id"></result>
+		 	<result property="likeCount" column="likeCount"></result>
+		 	<result property="answer_content" column="answer_content"></result>
+		 	<result property="answer_time" column="answer_time"></result>
+	 	</collection>
+	 </resultMap>
+	 
+	 <select id="findAnswerContent" resultMap="UserMap2">
+	 	select aa.user_Id,userName,answer_Time,answer_Content,likeCount from USERS join ask_answer aa on aa.user_Id=users.user_Id
+		where aa.ask_Id=#{askId}
+	 </select>
+	 
+	 
+	 
+</mapper>

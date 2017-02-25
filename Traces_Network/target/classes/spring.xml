@@ -22,7 +22,7 @@
         http://www.springframework.org/schema/websocket
         http://www.springframework.org/schema/websocket/spring-websocket.xsd">
         
-        
+    <context:component-scan base-package="com.yc.tn"/>
     <context:property-placeholder location="classpath:db.properties"/>
 
     <!-- 配制数据源 -->
@@ -32,22 +32,26 @@
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
+		<property name="initialSize" value="${jdbc.initialSize}" />
+		<property name="maxTotal" value="${jdbc.maxTotal}" />
+		<property name="minIdle" value="${jdbc.minIdle}" />
+		<property name="validationQuery" value="${jdbc.validationQuery}" />
 	</bean>
 	
-		<!-- 配制mybatis与spring整合的SqlSessionFactory的对象 -->
+	<!-- 配制mybatis与spring整合的SqlSessionFactory的对象 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 	    <property name="dataSource" ref="dataSource"/>
-	    <property name="typeAliasesPackage" value="com.yc.ccs.entity"/>
+	    <property name="typeAliasesPackage" value="com.yc.tn.entity"/>
 	    <property name="mapperLocations" value="classpath:mapper/*Mapper.xml"/>
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-	    <property name="basePackage" value="com.yc.ccs.mapper"/>
+	    <property name="basePackage" value="com.yc.tn.mapper"/>
 	    <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
 	</bean>
 	
 	<!-- 邮件发送配制 -->
-	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+	<!-- <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
     	<property name="host" value="${mail.smtp.host}"/>
     	<property name="username" value="${mail.smtp.username}"/>
     	<property name="password" value="${mail.smtp.password}"/>
@@ -57,5 +61,5 @@
     	         <prop key="mail.smtp.timeout">${mail.smtp.timeout}</prop>
     	    </props>
     	</property>
-	</bean>
+	</bean> -->
 </beans>

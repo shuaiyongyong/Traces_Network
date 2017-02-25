@@ -106,13 +106,34 @@ a{
 }
 
 .rows-right{
+	height:17px;
 	margin-top:20px;
 	margin-left:500px;
 	font-size:12px;
 }
 
-.rows-right a{
-	padding-left:10px;
+
+
+.inline-btn{
+	float:left;
+	font-size:12px;
+	margin-left:5px;
+}
+
+.active{
+	background-color:#F00
+}
+
+/* .inline-btn1{
+	background-color:#F00;
+} */
+
+#list-question{
+	width:654px;
+	height:99px;
+	font-size:12px;
+	border-bottom:1px dashed #CCC;
+	margin-top:5px;
 }
 
 .media-list-question{
@@ -136,15 +157,19 @@ a{
 	margin-top:10px;
 }
 
-.tag-list{
-	width:591px;
-	height:23px;
+.tag{
 	float:left;
-	margin-left:10px;
-	margin-top:10px;
+}
+
+.tag-list{
+	width:500px;
+	height:25px;
+	margin-left:50px;
+	margin-top:5px;
 }
 
 .jd{ color:#CCC;}
+.rq{ color:#CCC;}
 
 .remain-left{
 	width:29%;

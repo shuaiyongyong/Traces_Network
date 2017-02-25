@@ -36,177 +36,39 @@
                 	<img src="images/wen.jpg" id="img1"/>
                 	<p class="top-title">全部问题</p>
                     <a href="page/ask.jsp"><input type="button" id="btn1"></a>
-                    <ul class="tabs">
+                    <!-- <ul class="tabs">
                     	<li class="tabs-a">
                         	<a href="page/quList.jsp" class="item">已解决问题</a>
                         </li>
                         <li class="tabs-b">
                         	<a href="page/quList.jsp" class="item">待回答问题</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="right-bottom">
                 	<div class="rows-right">
-                        	<a href="page/quList.jsp" class="inline-btn"><b>最新</b></a>
-                            <a href="page/quList.jsp" class="inline-btn"><b>最热</b></a>
-                            <a href="page/quList.jsp" class="inline-btn"><b>已采纳</b></a>
-                            <a href="page/quList.jsp" class="inline-btn"><b>未采纳</b></a>
+                        	<div class="inline-btn"><a onclick="list()"><b>最新</b></a></div>&nbsp;&nbsp;&nbsp;
+                            <div class="inline-btn"><a  onclick="listByClick()" ><b>最热</b></a></div>&nbsp;&nbsp;&nbsp;
+                            <div class="inline-btn"><a  onclick="listByStatus1()"><b>已采纳</b></a></div>&nbsp;&nbsp;&nbsp;
+                            <div class="inline-btn"><a  onclick="listByStatus2()"><b>未采纳</b></a></div>
                     </div>
-                    <div class="media-list-question">
+                    <div id="list-question">
+                    	<!-- <div class="media-list-question">
                     	<a class="c-img"><img src="images/quList01.jpg" width="48px" height="48px"></a>
                         <div class="content">
-                        	<a>easylife </a><span class="jd">解答了：</span>
-                            <a class="answer" href="page/quDetail.jsp">我们第3天去参观圣巴巴拉教堂和人骨教堂是从市区集合地有专车送过送回到市区的集合地Nar</a>
+                        	<a id="username">easylife </a><span class="jd">提问：</span>
+                            <a id="ask_Content" class="answer" href="page/quDetail.jsp">我们第3天去参观圣巴巴拉教堂和人骨教堂是从市区集合地有专车送过送回到市区的集合地Nar</a>
                         </div>
                         <div class="tag-list">
-                            <button>教堂</button>&nbsp;&nbsp;&nbsp;
-                            <button>圣巴巴拉</button>&nbsp;&nbsp;&nbsp;
-                            <button>巴拉</button>
-                            <span class="date">2017-01-14</span>
-                        </div>
-    				</div>
-                    <div class="media-list-question">
-                    	<a class="c-img"><img src="images/quList01.jpg" width="48px" height="48px"></a>
-                        <div class="content">
-                            <a>easylife </a><span class="jd">解答了：</span>
-                            <a class="answer" href="page/quDetail.jsp">我们第3天去参观圣巴巴拉教堂和人骨教堂是从市区集合地有专车送过送回到市区的集合地Nar</a>
-                        </div>
-                        <div class="tag-list">
-                            <button>教堂</button>&nbsp;&nbsp;&nbsp;
-                            <button>圣巴巴拉</button>&nbsp;&nbsp;&nbsp;
-                            <button>巴拉</button>
-                            <span class="date">2017-01-14</span>
-                        </div>
-    				</div>
-                    <div class="media-list-question">
-                    	<a class="c-img"><img src="images/quList01.jpg" width="48px" height="48px"></a>
-                        <div class="content">
-                            <a>easylife </a><span class="jd">解答了：</span>
-                            <a class="answer" href="page/quDetail.jsp">我们第3天去参观圣巴巴拉教堂和人骨教堂是从市区集合地有专车送过送回到市区的集合地Nar</a>
-                        </div>
-                        <div class="tag-list">
-                            <button>教堂</button>&nbsp;&nbsp;&nbsp;
-                            <button>圣巴巴拉</button>&nbsp;&nbsp;&nbsp;
-                            <button>巴拉</button>
-                            <span class="date">2017-01-14</span>
-                        </div>
-    				</div>
-                    <div class="media-list-question">
-                    	<a class="c-img"><img src="images/quList01.jpg" width="48px" height="48px"></a>
-                        <div class="content">
-                            <a>easylife </a><span class="jd">解答了：</span>
-                            <a class="answer" href="page/quDetail.jsp">我们第3天去参观圣巴巴拉教堂和人骨教堂是从市区集合地有专车送过送回到市区的集合地Nar</a>
-                        </div>
-                        <div class="tag-list">
-                           <button>教堂</button>&nbsp;&nbsp;&nbsp;
-                            <button>圣巴巴拉</button>&nbsp;&nbsp;&nbsp;
-                            <button>巴拉</button>
-                            <span class="date">2017-01-14</span>
-                        </div>
-    				</div>
-                    <div class="media-list-question">
-                    	<a class="c-img"><img src="images/quList01.jpg" width="48px" height="48px"></a>
-                        <div class="content">
-                            <a>easylife </a><span class="jd">解答了：</span>
-                            <a class="answer" href="page/quDetail.jsp">我们第3天去参观圣巴巴拉教堂和人骨教堂是从市区集合地有专车送过送回到市区的集合地Nar</a>
-                        </div>
-                        <div class="tag-list">
-                            <button>教堂</button>&nbsp;&nbsp;&nbsp;
-                            <button>圣巴巴拉</button>&nbsp;&nbsp;&nbsp;
-                            <button>巴拉</button>
-                            <span class="date">2017-01-14</span>
-                        </div>
-    				</div>
-                    <div class="media-list-question">
-                    	<a class="c-img"><img src="images/quList01.jpg" width="48px" height="48px"></a>
-                        <div class="content">
-                            <a>easylife </a><span class="jd">解答了：</span>
-                            <a class="answer" href="page/quDetail.jsp">我们第3天去参观圣巴巴拉教堂和人骨教堂是从市区集合地有专车送过送回到市区的集合地Nar</a>
-                        </div>
-                        <div class="tag-list">
-                            <button>教堂</button>&nbsp;&nbsp;&nbsp;
-                            <button>圣巴巴拉</button>&nbsp;&nbsp;&nbsp;
-                            <button>巴拉</button>
-                            <span class="date">2017-01-14</span>
-                        </div>
-    				</div>
-                    <div class="media-list-question">
-                    	<a class="c-img"><img src="images/quList01.jpg" width="48px" height="48px"></a>
-                        <div class="content">
-                            <a>easylife </a><span class="jd">解答了：</span>
-                            <a class="answer" href="page/quDetail.jsp">我们第3天去参观圣巴巴拉教堂和人骨教堂是从市区集合地有专车送过送回到市区的集合地Nar</a>
-                        </div>
-                        <div class="tag-list">
-                            <button>教堂</button>&nbsp;&nbsp;&nbsp;
-                            <button>圣巴巴拉</button>&nbsp;&nbsp;&nbsp;
-                            <button>巴拉</button>
-                            <span class="date">2017-01-14</span>
-                        </div>
-    				</div>
-					<div class="media-list-question">
-                    	<a class="c-img"><img src="images/quList01.jpg" width="48px" height="48px"></a>
-                        <div class="content">
-                            <a>easylife </a><span class="jd">解答了：</span>
-                            <a class="answer" href="page/quDetail.jsp">我们第3天去参观圣巴巴拉教堂和人骨教堂是从市区集合地有专车送过送回到市区的集合地Nar</a>
-                        </div>
-                        <div class="tag-list">
-                            <button>教堂</button>&nbsp;&nbsp;&nbsp;
-                            <button>圣巴巴拉</button>&nbsp;&nbsp;&nbsp;
-                            <button>巴拉</button>
-                            <span class="date">2017-01-14</span>
-                        </div>
-    				</div>
-                    <div class="media-list-question">
-                    	<a class="c-img"><img src="images/quList01.jpg" width="48px" height="48px"></a>
-                        <div class="content">
-                            <a>easylife </a><span class="jd">解答了：</span>
-                            <a class="answer" href="page/quDetail.jsp">我们第3天去参观圣巴巴拉教堂和人骨教堂是从市区集合地有专车送过送回到市区的集合地Nar</a>
-                        </div>
-                        <div class="tag-list">
-                            <button>教堂</button>&nbsp;&nbsp;&nbsp;
-                            <button>圣巴巴拉</button>&nbsp;&nbsp;&nbsp;
-                            <button>巴拉</button>
-                            <span class="date">2017-01-14</span>
-                        </div>
-    				</div>
-                    <div class="media-list-question">
-                    	<a class="c-img"><img src="images/quList01.jpg" width="48px" height="48px"></a>
-                        <div class="content">
-                            <a>easylife </a><span class="jd">解答了：</span>
-                            <a class="answer" href="page/quDetail.jsp">我们第3天去参观圣巴巴拉教堂和人骨教堂是从市区集合地有专车送过送回到市区的集合地Nar</a>
-                        </div>
-                        <div class="tag-list">
-                            <button>教堂</button>&nbsp;&nbsp;&nbsp;
-                            <button>圣巴巴拉</button>&nbsp;&nbsp;&nbsp;
-                            <button>巴拉</button>
-                            <span class="date">2017-01-14</span>
-                        </div>
-    				</div>
-                    <div class="media-list-question">
-                    	<a class="c-img"><img src="images/quList01.jpg" width="48px" height="48px"></a>
-                        <div class="content">
-                            <a>easylife </a><span class="jd">解答了：</span>
-                            <a class="answer" href="page/quDetail.jsp">我们第3天去参观圣巴巴拉教堂和人骨教堂是从市区集合地有专车送过送回到市区的集合地Nar</a>
-                        </div>
-                        <div class="tag-list">
-                            <button>教堂</button>&nbsp;&nbsp;&nbsp;
-                            <button>圣巴巴拉</button>&nbsp;&nbsp;&nbsp;
-                            <button>巴拉</button>
-                            <span class="date">2017-01-14</span>
-                        </div>
+	                            <button class="tag">教堂</button>&nbsp;&nbsp;&nbsp;
+	                            <button class="tag">圣巴巴拉</button>&nbsp;&nbsp;&nbsp;
+	                            <button class="tag">巴拉</button>
+	                    </div>
+                        <span id="answer_time" class="date">2017-01-14</span>  -->
     				</div>
                     
-                    <div class="paging">
-                    	<ul>
-                        	<li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li>6</li>
-                            <li id="last">下一页</li>
-                        </ul>
-                    </div>
+                    
+                    <p align="right" id="pagation"></p>
                    
            </div>
         </div>
